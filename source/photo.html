@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Sedona</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a>Фото и видео</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">HTML academy</a>
+            </li>
+          </ul>
+        </div>
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="img/sedona-logo-mobile.svg" width="102" height="83" alt="Логотип «Sedona»">
+        </a>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="welcome">
+        <h1 class="visually-hidden">Фото и видео городка Седона</h1>
+        <img class="welcome__logo-image" src="img/sedona.svg" width="229" height="39" alt="Sedona!">
+        <h2 class="welcome__title title">Фото и видео</h2>
+        <p class="welcome__intro intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике. Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+      </section>
+      <section class="photos">
+        <ul class="photos__list">
+          <li class="photos__item">
+            <a class="photos__link" href="#">
+              <img class="photos__image photos__image_photo-1" src="img/photo-1.jpg" width="280" height="280" alt="Неродные просторы">
+            </a>
+            <h3 class="photos__title">Неродные просторы</h3>
+            <p class="photos__author">Автор фото: Борис</p>
+            <p class="photos__likes">1350</p>            
+          </li>
+          <li class="photos__item">
+            <a class="photos__link" href="#">
+              <img class="photos__image photos__image_photo-2" src="img/photo-2.jpg" width="280" height="280" alt="Местная растительность">
+            </a>
+            <h3 class="photos__title">Местная растительность</h3>
+            <p class="photos__author">Автор фото: Сергей</p>
+            <p class="photos__likes">143</p>            
+          </li>
+          <li class="photos__item">
+            <a class="photos__link" href="#">
+              <img class="photos__image photos__image_photo-3" src="img/photo-3.jpg" width="280" height="280" alt="Дорога на север">
+            </a>
+            <h3 class="photos__title">Дорога на север</h3>
+            <p class="photos__author">Автор фото: Петр</p>
+            <p class="photos__likes">96</p>            
+          </li>
+          <li class="photos__item">
+            <a class="photos__link" href="#">
+              <img class="photos__image photos__image_photo-4" src="img/photo-4.jpg" width="280" height="280" alt="Мост дьявола">
+            </a>
+            <h3 class="photos__title">Мост дьявола</h3>
+            <p class="photos__author">Автор фото: Антон</p>
+            <p class="photos__likes">254</p>            
+          </li>
+        </ul>
+      </section>
+      <section class="video">
+        <h2 class="video__title title">Все еще сомневаетесь?</h2>
+        <p class="video__intro intro">Cмотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <video controls width="321" height="201">
+          <source src="video.mp4" type="video/mp4">
+        </video>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <a class="page-footer__tag"href="#">#VisitSedona</a>
+      <ul class="page-footer__social-list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link_twitter" href="#">
+            <span class="visually-hidden">"Седона в twitter"</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link_facebook" href="#">
+            <span class="visually-hidden">"Седона в facebook"</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link_youtube" href="#">
+            <span class="visually-hidden">"Седона в youtube"</span>
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <span class="copyright__title">Разработано</span>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+      </div>
+    </footer>
+  </body>
+</html>
