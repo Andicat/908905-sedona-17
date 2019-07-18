@@ -1,0 +1,100 @@
+.advantages__list {
+	padding: 0;
+	list-style: none;
+	background-color: #eeeeee;
+	counter-reset: list; 
+}
+
+.advantages__item {
+	min-height: 100px;
+	padding: 33px 35px;
+	counter-increment: list;
+}
+
+.advantages__item_inner {
+	position: relative;
+}
+
+.advantages__item_inner::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 280px;
+  	height: 1px;
+  	background-color: #000000;
+  	opacity: 0.1;
+  	bottom: 0;
+  	left: 20px;
+}
+ 
+.advantages__name {
+	margin: 0;
+	padding-bottom: 40px;
+	position: relative;
+}
+
+.advantages__name::before {
+	content: " — №" counter(list) " — ";
+	position: absolute;
+	font-size: 14px;
+	font-weight: normal;
+	width: 60px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -30px;
+}
+
+.advantages__item-wrapper {
+	padding: 33px 35px;
+}
+
+.advantages__item-special {
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	background-color: #81b3d2;
+}
+
+.features {
+	background-color: @white;
+	color: #000000;
+	list-style: none;
+}
+
+.features__item {
+	position: relative;
+	padding: 10px 10px 5px;
+	text-align: left;
+}
+
+.features__description {
+	color: #333333;
+}
+
+.features__item::before {
+	content: "";
+	width: 37px;
+	height: 36px;
+	background-color: @white;
+	background-image: url("../img/icon-motel.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 37px 36px;
+	position: absolute;
+	top: 15px;
+	left: 0%;
+	margin-left: -35px;
+}
+
+.features__item_motel::before{
+	background-image: url("../img/icon-house.svg");
+}
+
+.features__item_souvenirs::before{
+	background-image: url("../img/icon-gift.svg");
+}
+
+.features__item_food::before {
+	background-image: url("../img/icon-burger.svg");
+}
