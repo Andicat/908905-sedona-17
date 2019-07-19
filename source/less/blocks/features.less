@@ -1,5 +1,5 @@
 .features {
-  padding: 0;
+  padding: 20px 0;
   background-color: @white;
   color: #000000;
   list-style: none;
@@ -8,7 +8,8 @@
 .features__item {
   box-sizing: border-box;
   position: relative;
-  padding: 40px 20px 5px 70px;
+  padding: 20px;
+  padding-left: 70px;
   text-align: left;
 }
 
@@ -18,16 +19,13 @@
 
 .features__item::before {
   content: "";
-  width: 37px;
-  height: 36px;
   background-color: @white;
-  background-image: url("../img/icon-motel.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 37px 36px;
+  background-size: 100% 100%;
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 6px;
+  left: 20px;
 }
 
 .features__name {
@@ -39,15 +37,21 @@
   margin: 0;
 }
 
-.features__item_motel::before{
+.features__item_house::before {
+  width: 37px;
+  height: 36px;
   background-image: url("../img/icon-house.svg");
 }
 
-.features__item_souvenirs::before{
+.features__item_gift::before {
+  width: 32px;
+  height: 38px;
   background-image: url("../img/icon-gift.svg");
 }
 
-.features__item_food::before {
+.features__item_burger::before {
+  width: 40px;
+  height: 35px;
   background-image: url("../img/icon-burger.svg");
 }
 
@@ -58,5 +62,28 @@
   }
   .features__item {
     width: calc(100%*1/3);
+    padding: 140px 45px 40px 45px;
+    text-align: center;
+  }
+  .features__item_gift {
+    order: 2;
+  }
+  .features__item::before {
+    content: "";
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .features__item_house::before {
+    width: 75px;
+    height: 72px;
+  }
+  .features__item_gift::before {
+    width: 77px;
+    height: 68px;
+  }
+  .features__item_burger::before {
+    width: 64px;
+    height: 75px;
   }
 }
