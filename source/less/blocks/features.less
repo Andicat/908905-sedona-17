@@ -1,0 +1,62 @@
+.features {
+  padding: 0;
+  background-color: @white;
+  color: #000000;
+  list-style: none;
+}
+
+.features__item {
+  box-sizing: border-box;
+  position: relative;
+  padding: 40px 20px 5px 70px;
+  text-align: left;
+}
+
+.features__description {
+  color: @darkgrey;
+}
+
+.features__item::before {
+  content: "";
+  width: 37px;
+  height: 36px;
+  background-color: @white;
+  background-image: url("../img/icon-motel.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 37px 36px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.features__name {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.features__description {
+  margin: 0;
+}
+
+.features__item_motel::before{
+  background-image: url("../img/icon-house.svg");
+}
+
+.features__item_souvenirs::before{
+  background-image: url("../img/icon-gift.svg");
+}
+
+.features__item_food::before {
+  background-image: url("../img/icon-burger.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .features__item {
+    width: calc(100%*1/3);
+  }
+}
