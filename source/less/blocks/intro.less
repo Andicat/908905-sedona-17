@@ -1,5 +1,8 @@
 .intro {
-	padding: 22px;
+	width: 255px;
+	min-height: 115px;
+	margin: 45px auto;
+	
 }
 
 .intro_index {
@@ -18,4 +21,15 @@
 .intro__text {
 	font-size: 14px;
 	line-height: 26px;
+	color: @darkgrey;
+}
+
+@media (min-width: @tablet-width) {
+	.intro {
+		width: 490px;
+		margin: 50px auto;
+	}
+	.intro__title {
+		font-size: 21px;
+	}
 }
