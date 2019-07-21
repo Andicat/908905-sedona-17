@@ -1,40 +1,56 @@
-.page-footer { 
+.page-footer {
+  box-sizing: border-box;
   width: 320px;
-  margin: 10px auto;
+  padding: 35px 20px 25px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 245px;
 }
 
 .page-footer__tag {
-  min-width: 200px;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
-  letter-spacing: normal;
-  text-align: center;
-  color: #000000;
+  color: @black;
 }
 
-.social-list {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  min-width: 156px;
-  min-height: 48px;
-  padding: 0;
-  margin: 0;
+.page-footer__social-list {
+  margin: 0 auto;
 }
 
-.social-list__item {
-  background-color: #81b3d2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 48px;
-  margin: 3px;
+.page-footer__copyright-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 34px;
+  background-color: @white;
+  background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 10px;
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     width: @tablet-width;
+    flex-direction: row;
+    align-items: center;
+    padding: 33px 60px;
+    min-height: 0;
+  }
+  .page-footer__copyright {
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+    padding: 32px 120px;
+  }
+  .page-footer__copyright {
+    margin-left: 5px;
   }
 }

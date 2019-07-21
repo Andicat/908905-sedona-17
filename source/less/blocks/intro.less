@@ -4,7 +4,7 @@
 
 .intro__wrapper {
   width: 255px;
-  margin: 43px auto 0 auto;
+  margin: 40px auto 20px auto;
 }
 
 .intro_index::after {
@@ -15,14 +15,14 @@
   background-image: url(../img/bg-triangle.svg);
   background-repeat: no-repeat;
   left: 0;
-  bottom: -16px;
+  bottom: -43px;
 }
 
 .intro__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
-  margin: 0 0 25px 0;
+  margin: 0 0 28px 0;
 }
 
 .intro__text {
@@ -35,13 +35,18 @@
 @media (min-width: @tablet-width) {
   .intro__wrapper {
     width: 490px;
-    margin: 51px auto;
+    margin: 49px auto 50px;
   }
   .intro_index::after {
     display: none;
   }
-
   .intro__title {
     font-size: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__wrapper {
+    margin: 52px auto 50px;
   }
 }
