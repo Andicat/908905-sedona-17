@@ -29,6 +29,12 @@
   color: @white;
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-nav_closed .main-nav__wrapper {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-nav__list {
     display: flex;
