@@ -1,10 +1,21 @@
 .intro_index {
   position: relative;
+  padding: 43px 20px 10px 20px;
 }
 
-.intro__wrapper {
+.intro_photo {
+  position: relative;
+  padding: 40px 20px 20px 20px;
+}
+
+.intro_index .intro__wrapper {
   width: 255px;
-  margin: 40px auto 20px auto;
+  margin: 0 auto;
+}
+
+.intro_photo .intro__wrapper {
+  width: 270px;
+  margin: 0 auto;
 }
 
 .intro_index::after {
@@ -15,7 +26,7 @@
   background-image: url(../img/bg-triangle.svg);
   background-repeat: no-repeat;
   left: 0;
-  bottom: -43px;
+  bottom: -37px;
 }
 
 .intro__title {
@@ -33,13 +44,26 @@
 }
 
 @media (min-width: @tablet-width) {
-  .intro__wrapper {
-    width: 490px;
-    margin: 49px auto 50px;
+  .intro_index {
+    padding: 50px 20px;
   }
+
+  .intro_index .intro__wrapper {
+    width: 490px;
+  }
+
+  .intro_photo {
+    padding: 70px 20px;
+  }
+
+  .intro_photo .intro__wrapper {
+    width: 428px;
+  }
+
   .intro_index::after {
     display: none;
   }
+  
   .intro__title {
     font-size: 21px;
   }

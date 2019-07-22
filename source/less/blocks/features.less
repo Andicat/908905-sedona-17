@@ -1,5 +1,6 @@
 .features {
-  padding: 16px 0 30px;
+  width: 100%;
+  padding: 16px 0 30px 0;
   background-color: @white;
   color: #000000;
   list-style: none;
@@ -9,6 +10,8 @@
   box-sizing: border-box;
   position: relative;
   padding: 20px 20px 9px 70px;
+  display: flex;
+  flex-direction: column;
   text-align: left;
 }
 
@@ -31,7 +34,10 @@
 }
 
 .features__description {
+  max-width: 100%;
   color: @darkgrey;
+  margin: 0;
+  margin-bottom: 14px;
 }
 
 .features__item_house::before {
@@ -61,37 +67,41 @@
     display: flex;
     flex-wrap: wrap;
   }
+
   .features__item {
-    width: calc(100%*1/3);
+    width: calc(100% / 3);
     padding: 143px 47px 33px 47px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
   }
+
   .features__item_gift {
     order: 2;
   }
+
   .features__item::before {
     content: "";
     top: 45px;
     left: 50%;
     transform: translateX(-50%);
   }
+
   .features__item_house::before {
     width: 75px;
     height: 72px;
   }
+
   .features__item_gift::before {
     width: 64px;
     height: 75px;
     top: 40px;
   }
+
   .features__item_burger::before {
     width: 77px;
     height: 68px;
     top: 46px;
   }
+
   .features__name {
     font-size: 21px;
     margin-bottom: 20px;
@@ -102,6 +112,7 @@
   .features {
     padding-bottom: 50px;
   }
+  
   .features__description_narrow {
     max-width: 200px;
   }
