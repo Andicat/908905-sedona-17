@@ -23,6 +23,20 @@
   width: 280px;
   padding: 16px;
   margin: 34px auto 43px;
+  &:hover,
+  &:focus {
+    background-color: @blue-hover;
+    outline: none;
+  }
+  &:active {
+    background-color: @blue-down;
+    color: #ffffff4c;
+  }
+}
+
+.booking__search-button-disabled {
+  background-color: #e5e5e5;
+  pointer-events: none;
 }
 
 @media (min-width: @tablet-width) {
