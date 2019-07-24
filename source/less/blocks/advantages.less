@@ -17,18 +17,17 @@
 
 .advantages__item_inner {
   position: relative;
-}
-
-.advantages__item_inner::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 280px;
-  height: 1px;
-  background-color: #000000;
-  opacity: 0.1;
-  bottom: 0;
-  left: 20px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 280px;
+    height: 1px;
+    background-color: #000000;
+    opacity: 0.1;
+    bottom: 0;
+    left: 20px;
+  }
 }
 
 .advantages__name {
