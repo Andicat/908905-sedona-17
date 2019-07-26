@@ -50,6 +50,7 @@
 }
 
 .advantages__description {
+  max-width: 100%;
   font-size: 14px;
   line-height: 21px;
 }
@@ -76,6 +77,13 @@
   box-sizing: border-box;
   padding: 40px 23px 26px;
 }
+
+@media (max-width: @tablet-width-only) {
+  .advantages__description br {
+    display: none;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .advantages__list {
@@ -146,7 +154,7 @@
   }
 
   .advantages__description {
-    max-width: 285px;
+    max-width: 288px;
   }
 
   .advantages__description_narrow {

@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+.wrap-page {
+  width: 320px;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -47,6 +51,12 @@ a {
   pointer-events: none;
 }
 
+@media (max-width: @mobile-width-only) {
+  br {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .wrap-page {
     width: @tablet-width;
@@ -57,5 +67,9 @@ a {
   .wrap-page {
     width: @desktop-width;
     box-shadow: -5px 0px 5px -3px rgba(0, 1, 1, 0.2), 5px 0px 5px -3px rgba(0, 1, 1, 0.2);
+  }
+
+  .text-to-hide {
+    display: none;
   }
 }

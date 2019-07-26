@@ -12,6 +12,7 @@
   padding: 20px 20px 9px 70px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: left;
 }
 
@@ -36,7 +37,7 @@
 .features__description {
   max-width: 100%;
   color: @darkgrey;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 14px;
 }
 
@@ -70,7 +71,7 @@
 
   .features__item {
     width: calc(100% / 3);
-    padding: 143px 47px 33px 47px;
+    padding: 143px 45px 33px 45px;
     text-align: center;
   }
 
@@ -111,9 +112,5 @@
 @media (min-width: @desktop-width) {
   .features {
     padding-bottom: 50px;
-  }
-  
-  .features__description_narrow {
-    max-width: 200px;
   }
 }
