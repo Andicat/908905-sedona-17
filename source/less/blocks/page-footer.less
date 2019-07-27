@@ -5,20 +5,21 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   min-height: 245px;
 }
 
 .page-footer__tag {
+  display: block;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
   color: @black;
+  margin-bottom: 35px;
 }
 
 .page-footer__social-list {
-  margin: 0 auto;
+  margin: 0 auto 35px;
 }
 
 .page-footer__copyright-logo {
@@ -48,6 +49,14 @@
     min-height: 0;
   }
 
+  .page-footer__tag {
+    margin-bottom: 0;
+  }
+
+  .page-footer__social-list {
+    margin-bottom: 0;
+  }
+  
   .page-footer__copyright {
     margin-left: 5px;
   }
