@@ -1,6 +1,7 @@
 .review-form {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   border-top: 1px solid #c5c5c5;
 }
 
@@ -17,6 +18,7 @@
 
 .review-form__title {
   width: 100%;
+  margin: auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -208,9 +210,13 @@
   display: none;
 }
 
+.review-form__input_error {
+  border: solid 1px red;
+}
+
 .review-form__group_contact {
   margin-top: 17px;
-  padding-bottom: 17px;
+  padding-bottom: 10px;
   .review-form__label {
     margin-left: 22px;
     margin-bottom: 6px;
@@ -221,7 +227,7 @@
 }
 
 .review-form__group_impress {
-  margin-top: 18px;
+  margin-top: 17px;
   padding-bottom: 8px;
 }
 
@@ -293,7 +299,7 @@
     border-top: none;
     padding-left: 58px;
     margin-top: 15px;
-    legend {
+    .review-form__title {
       text-align: left;
       padding: 0;
       margin-bottom: 36px;
@@ -312,9 +318,13 @@
     .review-form__row {
       padding-bottom: 12px;
     }
+    .review-form__input {
+      min-width: 80%;
+    }
   }
 
   .review-form__group_sight {
+    margin-top: 10px;
     padding-bottom: 0;
     .review-form__title {
       margin-bottom: 18px;
@@ -357,13 +367,64 @@
 
 @media (min-width: @desktop-width) {
   .review-form {
-    padding: 0 120px;
+    padding: 0 120px 46px 120px;
   }
+
+  .review-form__group_impress {
+    margin-top: 13px;
+    .review-form__title {
+      padding-left: 80px;
+    }
+     &::after {
+      height: calc(100% - 58px);
+    }
+  }
+
+  .review-form__group_name {
+    margin-top: 13px;
+    padding-left: 80px;
+    .review-form__label {
+      margin-right: 15px;
+    }
+  }
+
+  .review-form__group_contact {
+    margin-top: 14px;
+    padding-bottom: 5px;
+    .review-form__list {
+      padding-top: 51px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .review-form__row {
+      width: 50%;
+    }
+    .review-form__label {
+      margin: 0 16px 0 0;
+      width: auto;
+    }
+    .review-form__input {
+      min-width: 0%;
+      max-width: 54%;
+    }
+  }
+
   .review-form__group_sight {
+     margin-top: 4px;
     .review-form__list {
       flex-wrap: nowrap;
       justify-content: space-between;
       padding: 0; 
     }
+    .review-form__label {
+      margin: 0;
+    }
+    .review-form__option {
+      width: auto;
+    }
+  }
+
+  .review-form__group_emotion {
+    margin-top: 16px;
   }
 }

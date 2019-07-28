@@ -44,16 +44,16 @@
           <p class="intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
       </section>
-      <form class="review-form" action="https://echo.htmlacademy.ru" method="post" name="review">
+      <form class="review-form" action="https://echo.htmlacademy.ru" method="post" name="review" novalidate>
         <fieldset class="review-form__group review-form__group_name">
           <legend class="review-form__title">Представьтесь:</legend>
           <div class="review-form__row">
             <label class="review-form__label" for="name">Имя*:</label>
-            <input class="review-form__input" type="text" name="name" id="name" placeholder="Петр" value="">
+            <input class="review-form__input" type="text" name="name" id="name" placeholder="Петр" value="" required>
           </div>
           <div class="review-form__row">
             <label class="review-form__label" for="surname">Фамилия*:</label>
-            <input class="review-form__input" type="text" name="surname" id="surname" placeholder="Иванов" value="">
+            <input class="review-form__input" type="text" name="surname" id="surname" placeholder="Иванов" value="" required>
           </div>
           <div class="review-form__row">
             <label class="review-form__label" for="patronymic">Отчество:</label>
@@ -62,16 +62,18 @@
         </fieldset>
         <fieldset class="review-form__group review-form__group_contact">
           <legend class="review-form__title">Контактная информация:</legend>
-          <div class="review-form__row">
-            <label class="review-form__label" for="tel"><span class="text-to-hide">Контактный </span>телефон*:</label>
-            <input class="review-form__input" type="tel" name="tel" id="tel" placeholder="Введите телефон" value="">
-            <div class="review-form__icon review-form__icon-tel"></div>
-          </div>
-          <div class="review-form__row">
-            <label class="review-form__label" for="email">Электронная почта*:</label>
-            <input class="review-form__input" type="email" name="email" id="email" placeholder="Введите e-mail" value="">
-            <div class="review-form__icon review-form__icon-mail"></div>
-          </div>
+           <ul class="review-form__list">
+            <li class="review-form__row">
+              <label class="review-form__label" for="tel"><span class="text-to-hide">Контактный </span>телефон*:</label>
+              <input class="review-form__input" type="tel" name="tel" id="tel" placeholder="Введите телефон" value="" required>
+              <div class="review-form__icon review-form__icon-tel"></div>
+            </li>
+            <li class="review-form__row">
+              <label class="review-form__label" for="email">Электронная почта*:</label>
+              <input class="review-form__input" type="email" name="email" id="email" placeholder="Введите e-mail" value="" required>
+              <div class="review-form__icon review-form__icon-mail"></div>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="review-form__group review-form__group_impress">
           <legend class="review-form__title">Ваше общее впечатление:</legend>
@@ -160,6 +162,20 @@
         </a>
       </div>
     </footer>
+    <section class="modal-form modal-form_error">
+      <h2 class="modal-form__title">Что-то пошло не&nbsp;так!</h2>
+      <p class="modal-form__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>  
+      <button class="modal-form__button blue-button" type="button">ОК</button>
+    </section>
+    <section class="modal-form modal-form_done">
+      <div class="modal-form__text-wrapper">
+        <h2 class="modal-form__title">Ваш отзыв отправлен!</h2>
+        <p class="modal-form__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="modal-form__action">
+        <button class="modal-form__button blue-button" type="button">Закрыть окно</button>
+      </div>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>
