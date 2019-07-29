@@ -53,7 +53,7 @@
   font-weight: bold;
   color: @black;
   background-color: @lightgrey;
-  padding: 0 0 0 22px;
+  padding: 0 5px 0 22px;
   &::-webkit-input-placeholder {
     font-size: 16px;
     color: @black;
@@ -73,20 +73,30 @@
   }
 }
 
-.review-form__icon {
-  width: 58px;
-  height: 58px;
-  background-color: #e6e6e6;
-  background-repeat: no-repeat;
-  background-position: center;
-  flex-shrink: 0;  
+.review-form__input_wrapper {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  padding-right: 55px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 58px; 
+    height: 58px;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
-.review-form__icon-tel {
+.review-form__input_wrapper-tel::after {
   background-image: url("../img/icon-phone.svg");
 }
 
-.review-form__icon-mail {
+.review-form__input_wrapper-email::after {
   background-image: url("../img/icon-mail.svg");
 }
 
@@ -100,11 +110,9 @@
 
 .review-form__option {
   box-sizing: border-box;
-  cursor: pointer;
   padding: 15px 0 15px 80px;
   margin-bottom: 13px;
   .review-form__label {
-    cursor: pointer;
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
@@ -112,7 +120,7 @@
     color: @black;
   }
 
-  input + label::before {
+  .review-form__input + label::before {
     content: "";
     position: absolute;
     width: 56px; 
@@ -124,20 +132,20 @@
     transform: translateY(-50%);
   }
 
-  input[type="radio"] + label::before {
+  .review-form__input[type="radio"] + label::before {
     border-radius: 50%;
   }
 
-  input:hover + label::before,
-  input:focus + label::before {
+  .review-form__input:hover + label::before,
+  .review-form__input:focus + label::before {
     background-color: #e5e5e5;
   }
   
-  input:active + label::before {
+  .review-form__input:active + label::before {
     background-color: #d5d5d5;
   }
 
-  input[type="radio"]:checked + label::after {
+  .review-form__input[type="radio"]:checked + label::after {
     content: "";
     position: absolute;
     width: 22px; 
@@ -149,7 +157,7 @@
     transform: translateY(-50%);
   }
 
-  input[type="checkbox"]:checked + label::after {
+  .review-form__input[type="checkbox"]:checked + label::after {
     content: "";
     position: absolute;
     width: 16px; 
@@ -162,7 +170,7 @@
     transform: translateY(-80%) rotate(-45deg);
   }
   
-  input:active + label::after {
+  .review-form__input:active + label::after {
     opacity: 0.3;
   }
 }
@@ -180,13 +188,13 @@
   overflow:auto;
   background-color: @lightgrey;
   &:-ms-input-placeholder {
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: @black;
   }
   &::-webkit-input-placeholder {
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: @black;
@@ -247,6 +255,7 @@
 }
 
 .review-form__button {
+  .blue-button;
   margin: 40px auto 38px;
 }
 
@@ -397,15 +406,14 @@
       justify-content: space-between;
     }
     .review-form__row {
-      width: 50%;
+      width: 45%;
     }
     .review-form__label {
       margin: 0 16px 0 0;
       width: auto;
     }
-    .review-form__input {
-      min-width: 0%;
-      max-width: 54%;
+    .review-form__input_wrapper {
+      width: 100%;
     }
   }
 

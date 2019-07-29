@@ -1,13 +1,12 @@
 var navMain = document.querySelector('.main-nav');
-var navButtonOpen = document.querySelector('.page-header__button_open');
-var navButtonClose = document.querySelector('.page-header__button_close');
+var navButton = document.querySelector('.page-header__button');
 var reviewButton = document.querySelector(".review-form__button");
 var reviewForm = document.querySelector(".review-form");
 var errorForm = document.querySelector(".modal-form_error");
 var doneForm = document.querySelector(".modal-form_done");
-var closeErrorForm = errorForm.querySelector(".modal-form__button");
-var closeDoneForm = doneForm.querySelector(".modal-form__button");
 var requiredList = document.querySelectorAll("[required]");
+var closeErrorForm;
+var closeDoneForm;
 var closeButtonLink;
 var requiredItem; 
 var userName;
@@ -26,28 +25,15 @@ var valSurname;
 var valTel;
 var valEmail;
 
-// открытие/закрытие меню
 navMain.classList.remove('main-nav_nojs');
+navMain.classList.toggle('main-nav_closed');
+navButton.classList.remove('page-header__button_nojs');
 
-navButtonOpen.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav_closed')) {
-    navMain.classList.remove('main-nav_closed');
-    navMain.classList.add('main-nav_opened');
-  } else {
-    navMain.classList.add('main-nav_closed');
-    navMain.classList.remove('main-nav_opened');
-  }
+navButton.addEventListener("click", function (evt) {
+  navMain.classList.toggle('main-nav_closed');
+  navButton.classList.toggle('page-header__button_close');
 });
 
-navButtonClose.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav_closed')) {
-    navMain.classList.remove('main-nav_closed');
-    navMain.classList.add('main-nav_opened');
-  } else {
-    navMain.classList.add('main-nav_closed');
-    navMain.classList.remove('main-nav_opened');
-  }
-});
 
 //проверка работы хранилища  
 try {
@@ -62,6 +48,9 @@ try {
 
 //форма отправки отзыва
 if (reviewButton) {
+  reviewForm.setAttribute("novalidate", "novalidate");
+  closeErrorForm = errorForm.querySelector(".modal-form__button");
+  closeDoneForm = doneForm.querySelector(".modal-form__button");
   userName = reviewForm.querySelector("[id=name]");
   userSurname = reviewForm.querySelector("[id=surname]");
   userTel = reviewForm.querySelector("[id=tel]");
@@ -112,64 +101,64 @@ if (reviewButton) {
         doneForm.classList.add("modal-show");
       }
   });
-}
 
-// снятие ошибки при фокусе
-userName.onfocus = function() {
-  userName.classList.remove("review-form__input_error");
-};
+  // снятие ошибки при фокусе
+  userName.onfocus = function() {
+    userName.classList.remove("review-form__input_error");
+  };
 
-userSurname.onfocus = function() {
-  userSurname.classList.remove("review-form__input_error");
-};
+  userSurname.onfocus = function() {
+    userSurname.classList.remove("review-form__input_error");
+  };
 
-userTel.onfocus = function() {
-  userTel.classList.remove("review-form__input_error");
-};
+  userTel.onfocus = function() {
+    userTel.classList.remove("review-form__input_error");
+  };
 
-userEmail.onfocus = function() {
-  userEmail.classList.remove("review-form__input_error");
-};
+  userEmail.onfocus = function() {
+    userEmail.classList.remove("review-form__input_error");
+  };
 
-messageContent.onfocus = function() {
-  messageContent.classList.remove("review-form__input_error");
-};
+  messageContent.onfocus = function() {
+    messageContent.classList.remove("review-form__input_error");
+  };
 
-//закрытие модальных окон по кнопке
-closeErrorForm.addEventListener("click", function (evt) {
-  if (errorForm.classList.contains("modal-show")) {
-    errorForm.classList.remove("modal-show");
-    setFocus();
-  }
-});
+  //закрытие модальных окон по кнопке
+  closeErrorForm.addEventListener("click", function (evt) {
+    if (errorForm.classList.contains("modal-show")) {
+      errorForm.classList.remove("modal-show");
+      setFocus();
+    }
+  });
 
-closeDoneForm.addEventListener("click", function (evt) {
-  if (doneForm.classList.contains("modal-show")) {
-    doneForm.classList.remove("modal-show");
-  }
-});
+  closeDoneForm.addEventListener("click", function (evt) {
+    if (doneForm.classList.contains("modal-show")) {
+      doneForm.classList.remove("modal-show");
+    }
+  });
 
-//закрытие модальных окон по esc
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (errorForm) {
-      if (errorForm.classList.contains("modal-show")) {
-        errorForm.classList.remove("modal-show");
-        setFocus();
+  //закрытие модальных окон по esc
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (errorForm) {
+        if (errorForm.classList.contains("modal-show")) {
+          errorForm.classList.remove("modal-show");
+          setFocus();
+        }
+      }
+      if (doneForm) {
+        if (doneForm.classList.contains("modal-show")) {
+          doneForm.classList.remove("modal-show");
+        }
       }
     }
-    if (doneForm) {
-      if (doneForm.classList.contains("modal-show")) {
-        doneForm.classList.remove("modal-show");
-      }
-    }
-  }
-});
+  });
 
-for (var i = 0; i < requiredList.length; i++) {
-  requiredItem = requiredList[i];
-  requiredItem.removeAttribute("required");
+  for (var i = 0; i < requiredList.length; i++) {
+    requiredItem = requiredList[i];
+    requiredItem.removeAttribute("required");
+  }
 }
 
 function setFocus() {
