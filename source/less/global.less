@@ -1,0 +1,45 @@
+body {
+  background: #ffffff;
+  margin: 0px auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap-page {
+  width: 320px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+}
+
+@media (max-width: @mobile-width-only) {
+  br {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .wrap-page {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrap-page {
+    width: @desktop-width;
+    box-shadow: -5px 0px 5px -3px rgba(0, 1, 1, 0.2), 5px 0px 5px -3px rgba(0, 1, 1, 0.2);
+  }
+
+  .text-to-hide {
+    display: none;
+  }
+}
