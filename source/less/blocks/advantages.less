@@ -57,6 +57,8 @@
 
 .advantages__image {
   display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 .advantages__item-special {
@@ -83,7 +85,6 @@
     display: none;
   }
 }
-
 
 @media (min-width: @tablet-width) {
   .advantages__list {
@@ -114,6 +115,10 @@
     flex-shrink: 0;
   }
 
+  .advantages__item-wrapper_bridge {
+    order: 1;
+  }
+
   .advantages__name {
     max-width: 160px;
     font-size: 21px;
@@ -132,27 +137,13 @@
     bottom: 5px;
   }
 
-  .advantages__image {
-    width: calc(100% * 2 / 3);
-    height: 256px;
-    content: url(../img/main-city-tablet@1x.jpg);
-  }
-
-  .advantages__image_bridge {
-    content: url(../img/main-bridge-tablet@1x.jpg);
-    order: -1;
-  }
-
   .advantages__item_inner::after {
     display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .advantages__image {
-    content: url(../img/main-city-desktop@1x.jpg);
-  }
-
+  
   .advantages__description {
     max-width: 288px;
   }
@@ -171,10 +162,6 @@
 
   .advantages__item-special:first-child {
     padding-top: 0;
-  }
-
-  .advantages__image_bridge {
-    content: url(../img/main-bridge-desktop@1x.jpg);
   }
 
   .advantages__item {

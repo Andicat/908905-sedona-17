@@ -13,7 +13,7 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link-active" href="index.html">Главная</a>
+              <a class="main-nav__link main-nav__link_active" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item main-nav__item_central">
               <a class="main-nav__link" href="photo.html">Фото и видео</a>
@@ -57,7 +57,11 @@
               <h3 class="advantages__name">Настоящий городок</h3>
               <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="advantages__image" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Седона - настоящий городок">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+              <img class="advantages__image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" width="320" height="260" alt="Седона - настоящий городок">
+            </picture>
             <ul class="features">
               <li class="features__item features__item_house">
                 <h3 class="features__name">Жилье</h3>
@@ -74,11 +78,15 @@
             </ul>
           </li>
           <li class="advantages__item advantages__item-special">
-            <div class="advantages__item-wrapper">
+            <div class="advantages__item-wrapper advantages__item-wrapper_bridge">
               <h3 class="advantages__name">Там есть мост&nbsp;дьявола</h3>
               <p class="advantages__description">Да, по нему можно пройти!<br> Если вы осмелитесь, конечно</p>
             </div>
-            <img class="advantages__image advantages__image_bridge" src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="В Седоне есть мост дьявола">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+              <img class="advantages__image" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="В Седоне есть мост дьявола">
+            </picture>
           </li>
           <li class="advantages__item advantages__item_inner">
             <h3 class="advantages__name">Небольшая площадь</h3>

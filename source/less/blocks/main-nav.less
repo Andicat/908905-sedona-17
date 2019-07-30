@@ -27,19 +27,19 @@
   color: @white;
   box-shadow: inset 0px -1px 0 0 rgba(1, 1, 1, 0.2), inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
   background-color: @blue;
-  &:not(.main-nav__link-active):hover,
-  &:not(.main-nav__link-active):focus {
+  &:not(.main-nav__link_active):hover,
+  &:not(.main-nav__link_active):focus {
     background-color: @blue-hover;
     outline: none;
   }
-  &:not(.main-nav__link-active):active {
+  &:not(.main-nav__link_active):active {
     background-color: @blue-down;
     color: #ffffff4c;
   }
 }
 
 @media (max-width: @mobile-width-only) {
-  .main-nav__link-active {
+  .main-nav__link_active {
     pointer-events: none;
   }
   .main-nav_nojs .main-nav__wrapper{
@@ -77,19 +77,19 @@
     box-shadow: none;
     padding: 0;
     color: @black;
-    &:not(.main-nav__link-active):hover,
-    &:not(.main-nav__link-active):focus {
+    &:not(.main-nav__link_active):hover,
+    &:not(.main-nav__link_active):focus {
       background-color: @white;
       color: @blue;
       outline: none;
     }
-    &:not(.main-nav__link-active):active {
+    &:not(.main-nav__link_active):active {
       background-color: @white;
       color: #0000004c;
     }
   }
 
-  .main-nav__link-active {
+  .main-nav__link_active {
     color: #766357;
     &:hover,
     &:focus {
