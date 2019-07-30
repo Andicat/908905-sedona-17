@@ -1,0 +1,29 @@
+.social-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.social-list__link {
+  background-color: @blue;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  margin: 3px;
+  &:hover,
+  &:focus {
+    background-color: @blue-hover;
+    outline: none;
+  }
+  &:active {
+    background-color: @blue-down;
+    path {
+      fill-opacity: 0.3;
+    }
+  }
+}
