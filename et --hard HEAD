@@ -1,0 +1,93 @@
+[33mcommit ff90666689c803cb0b9214d02ce0a179057ae63a[m[33m ([m[1;36mHEAD -> [m[1;32mmodule4[m[33m, [m[1;32mmodule3-task1[m[33m)[m
+Author: Katerina <andicat@mail.ru>
+Date:   Wed Jul 17 21:04:54 2019 +0300
+
+    Создание less-файлов к каждому блоку. Без стилей
+
+[33mcommit ff246b3265ee25167395573f660e0a5a205d7bdb[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 505a0a1 f39b474
+Author: Katerina <andicat@mail.ru>
+Date:   Wed Jul 17 18:44:52 2019 +0300
+
+    Merge branch 'master' of github.com:htmlacademy-adaptive/908905-sedona-17
+
+[33mcommit f39b4740277d001a9a4d9a3e8a324ed3d7c08738[m[33m ([m[1;31macademy/master[m[33m)[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Wed Jul 17 18:44:33 2019 +0300
+
+    :kissing_cat: Добавляет сборку Less на Gulp
+
+[33mcommit 33ac65dbb96a12da1f610744698a6e6ba1691e56[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Wed Jul 17 18:44:22 2019 +0300
+
+    :gift: Нарезает графику для вёрстки
+
+[33mcommit 505a0a15f570c8a814b08c1dee080e2ed7bb46ed[m
+Merge: f80d93f 24aa446
+Author: Katerina <andicat@mail.ru>
+Date:   Wed Jul 17 18:44:05 2019 +0300
+
+    Merge branch 'master' of github.com:Andicat/908905-sedona-17
+
+[33mcommit f80d93f17455cf8e2c7760680d7e30acbcd3fac2[m
+Merge: 724ad85 b70a859
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Mon Jul 15 15:58:05 2019 +0300
+
+    Merge pull request #3 from Andicat/module2-task1
+
+[33mcommit b70a859c1cf173b56cc7ec71b11610b22ddf751a[m
+Author: Katerina <andicat@mail.ru>
+Date:   Mon Jul 15 10:05:51 2019 +0300
+
+    Внесла изменения в классы согласно замечаниям.
+
+[33mcommit 24aa446df83e628ff4bb53996ac0e3d6709be65a[m
+Merge: 123d152 9e10cd2
+Author: Katerina <44662206+Andicat@users.noreply.github.com>
+Date:   Mon Jul 15 07:51:39 2019 +0200
+
+    Merge pull request #2 from Andicat/module2-task1
+    
+    Разметка трех страниц мобильной версии
+
+[33mcommit 9e10cd26cea31730ed477d0f5282e40fb93eaa40[m[33m ([m[1;31morigin/module2-task1[m[33m, [m[1;32mmodule2-task1[m[33m)[m
+Author: Katerina <andicat@mail.ru>
+Date:   Sun Jul 14 18:19:15 2019 +0300
+
+    Разметка трех страниц мобильной версии
+
+[33mcommit 724ad8521cc72580bccd10724c9aa0483b1ce8fc[m
+Merge: dacc960 59b93ec
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Tue Jul 9 19:24:31 2019 +0300
+
+    Merge pull request #2 from Andicat/module1-task1
+
+[33mcommit 123d15254d75e1ff5d9376c0a335a1fc677eb64f[m
+Merge: dacc960 59b93ec
+Author: Katerina <44662206+Andicat@users.noreply.github.com>
+Date:   Tue Jul 9 15:21:35 2019 +0300
+
+    Merge pull request #1 from Andicat/module1-task1
+    
+    Имя наставника
+
+[33mcommit 59b93ec84adcd51f5ef582016f277885ac3df6f8[m[33m ([m[1;31morigin/module1-task1[m[33m)[m
+Author: Katerina <andicat@mail.ru>
+Date:   Tue Jul 9 15:09:38 2019 +0300
+
+    Имя наставника без лишней точечки
+
+[33mcommit c62eb2f19a2cf630079c2e3e27ae05f33747cf57[m
+Author: Katerina <andicat@mail.ru>
+Date:   Tue Jul 9 14:53:33 2019 +0300
+
+    Имя наставника
+
+[33mcommit dacc960afd6bc38445157cffe42f47002c7e0a17[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Mon Jul 8 21:55:07 2019 +0300
+
+    :hatching_chick:
