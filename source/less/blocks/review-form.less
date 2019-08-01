@@ -54,20 +54,24 @@
   color: @black;
   background-color: @lightgrey;
   padding: 0 5px 0 22px;
+
   &::-webkit-input-placeholder {
     font-size: 16px;
     color: @black;
   }
+
   &:hover {
     background-color: @grey;
     outline: none;
   }
+
   &:focus,
   &:active {
     background-color: @white;
     border: solid 4px @grey;
     outline: none;
   }
+
   &:focus::placeholder {
     color: transparent;
   }
@@ -78,6 +82,7 @@
   display: flex;
   flex-grow: 1;
   padding-right: 55px;
+
   &::after {
     content: "";
     position: absolute;
@@ -86,7 +91,7 @@
     background-color: @grey-e;
     background-repeat: no-repeat;
     background-position: center;
-    right: 0px;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -112,6 +117,7 @@
   box-sizing: border-box;
   padding: 15px 0 15px 80px;
   margin-bottom: 13px;
+
   .review-form__label {
     font-size: 18px;
     line-height: 26px;
@@ -187,28 +193,33 @@
   resize: none;
   overflow:auto;
   background-color: @lightgrey;
+
   &:-ms-input-placeholder {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: @black;
   }
+
   &::-webkit-input-placeholder {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: @black;
   }
+
   &:hover {
     background-color: @grey;
     outline: none;
   }
+
   &:focus,
   &:active {
     background-color: @white;
     border: solid 4px @grey;
     outline: none;
   }
+
   &:focus::placeholder {
     color: transparent;
   }
@@ -225,10 +236,12 @@
 .review-form__group_contact {
   margin-top: 17px;
   padding-bottom: 10px;
+
   .review-form__label {
     margin-left: 22px;
     margin-bottom: 6px;
   }
+
   .review-form__row {
     margin-bottom: 12px;
   }
@@ -243,6 +256,7 @@
   margin-top: 18px;
   padding-top: 16px;
   padding-bottom: 2px;
+
   .review-form__option {
     margin-bottom: 24px;
   }
@@ -283,12 +297,14 @@
     margin-top: 15px;
     order: -1;
     position: relative;
+
     .review-form__title {
       text-align: left;
       padding: 0;
       margin-bottom: 36px;
       width: 100%;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -298,6 +314,7 @@
       right: 0;
       top: 5px;
     }
+
     .review-form__option {
       margin-bottom: 22px;
     }
@@ -308,6 +325,7 @@
     border-top: none;
     padding-left: 58px;
     margin-top: 15px;
+
     .review-form__title {
       text-align: left;
       padding: 0;
@@ -318,15 +336,19 @@
 
   .review-form__group_contact {
     padding-bottom: 12px;
+
     .review-form__label {
       width: 100%;
     }
+
    .review-form__title {
       margin-bottom: 2px;
     }
+
     .review-form__row {
       padding-bottom: 12px;
     }
+
     .review-form__input {
       min-width: 80%;
     }
@@ -335,14 +357,17 @@
   .review-form__group_sight {
     margin-top: 10px;
     padding-bottom: 0;
+
     .review-form__title {
       margin-bottom: 18px;
     }
+
     .review-form__list {
       display: flex;
       flex-wrap: wrap;
       padding: 0 33px 0 95px;  
     }
+
     .review-form__option {
       width: 50%;
       margin-bottom: 32px;
@@ -351,6 +376,7 @@
 
   .review-form__group_emotion {
     padding-top: 16px;
+
     .review-form__text {
       margin-top: 41px;
     }
@@ -381,9 +407,11 @@
 
   .review-form__group_impress {
     margin-top: 13px;
+
     .review-form__title {
       padding-left: 80px;
     }
+
      &::after {
       height: calc(100% - 58px);
     }
@@ -392,6 +420,7 @@
   .review-form__group_name {
     margin-top: 13px;
     padding-left: 80px;
+
     .review-form__label {
       margin-right: 15px;
     }
@@ -400,18 +429,22 @@
   .review-form__group_contact {
     margin-top: 14px;
     padding-bottom: 5px;
+
     .review-form__list {
       padding-top: 51px;
       display: flex;
       justify-content: space-between;
     }
+
     .review-form__row {
       width: 45%;
     }
+
     .review-form__label {
       margin: 0 16px 0 0;
       width: auto;
     }
+
     .review-form__input_wrapper {
       width: 100%;
     }
@@ -419,14 +452,17 @@
 
   .review-form__group_sight {
      margin-top: 4px;
+
     .review-form__list {
       flex-wrap: nowrap;
       justify-content: space-between;
       padding: 0; 
     }
+
     .review-form__label {
       margin: 0;
     }
+    
     .review-form__option {
       width: auto;
     }

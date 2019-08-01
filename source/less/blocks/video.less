@@ -19,6 +19,7 @@
 .video__container {
   display: block;
   height: 201px;
+
   img {
     height: 100%;
     width: 100%;
@@ -77,16 +78,19 @@
   background-color: transparent;
   flex-shrink: 0;
   cursor: pointer;
+
   &:focus,
   &:active {
     outline: none;  
   }
+
   &:hover path,
   &:hover polygon,
   &:focus path,
   &:focus polygon {
     fill: @darkgrey;
   }
+
   &:active path,
   &:active polygon {
     fill: @darkgrey;
@@ -129,7 +133,7 @@
 
   .video__progress {
     position: relative;
-    top: 0px;
+    top: 0;
     margin-top: 0;
     background-color: transparent;
   }
@@ -146,6 +150,7 @@
     fill: @white;
     opacity: 0.6;
   }
+  
   .video__button:active path,
   .video__button:active polygon {
     fill: @white;
