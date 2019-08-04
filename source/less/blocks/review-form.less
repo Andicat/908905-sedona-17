@@ -265,6 +265,7 @@
 .review-form__group_emotion {
   margin-top: 18px;
   padding-top: 16px;
+  padding-bottom: 8px;
   border-bottom: none;
 }
 
@@ -317,6 +318,15 @@
 
     .review-form__option {
       margin-bottom: 22px;
+      padding-left: 75px;
+    }
+
+    .review-form__input[type="radio"] + label::before {
+      left: -75px;
+    }
+
+    .review-form__input[type="radio"]:checked + label::after {
+      left: -58px;   
     }
   }
 
@@ -343,7 +353,7 @@
     }
 
    .review-form__title {
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
 
     .review-form__row {
@@ -372,6 +382,10 @@
     .review-form__option {
       width: 50%;
       margin-bottom: 32px;
+    }
+
+     .review-form__input[type="checkbox"]:checked + label::after {
+      top: 60%;   
     }
   }
 
@@ -413,6 +427,10 @@
       padding-left: 80px;
     }
 
+    .review-form__list {
+      padding-left: 3px;
+    }
+
      &::after {
       height: calc(100% - 58px);
     }
@@ -428,7 +446,7 @@
   }
 
   .review-form__group_contact {
-    margin-top: 14px;
+    margin-top: 15px;
     padding-bottom: 5px;
 
     .review-form__list {
@@ -439,9 +457,14 @@
 
     .review-form__row {
       flex-wrap: nowrap;
-      width: 45%;
+      width: 50%;
     }
     
+    .review-form__input_wrapper {
+      width: 54.5%;
+      flex-grow: 0;
+    }
+
     .review-form__label {
       margin: 0 16px 0 0;
       width: auto;
@@ -457,6 +480,10 @@
       padding: 0; 
     }
 
+    .review-form__title {
+      margin-bottom: 19px;
+    }
+
     .review-form__label {
       margin: 0;
     }
@@ -467,6 +494,6 @@
   }
 
   .review-form__group_emotion {
-    margin-top: 16px;
+    margin-top: 15px;
   }
 }
