@@ -16,6 +16,7 @@
 .page-header__logo-image {
   width: 101px;
   height: 96.42px;
+  border: none;
 }
 
 .page-header__open {
@@ -34,7 +35,7 @@
   background-color: @white;
   background-image: url("../img/icon-menu.svg");
   font-size: 0;
-  margin:0;
+  margin: 0;
   border: none;
 
   &:hover,
@@ -50,7 +51,7 @@
   background-image: none;
   right: 15px;
   top: 15px;
-  
+
   &::before,
   &::after {
     content: "";
@@ -59,7 +60,7 @@
     height: 4px;
     background-color: @white;
     top: 10px;
-    left: -7px;  
+    left: -7px;
     border-radius: 2px;
   }
 
@@ -74,10 +75,6 @@
 
 .page-header__button_nojs {
   display: none;
-}
-
-.page-header__logo-image {
-  border: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -103,7 +100,7 @@
   .page-header {
     width: @desktop-width;
   }
-  
+
   .page-header__logo {
     height: 96.42px;
   }

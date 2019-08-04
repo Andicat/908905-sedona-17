@@ -8,7 +8,7 @@ var requiredList = document.querySelectorAll("[required]");
 var closeErrorForm;
 var closeDoneForm;
 var closeButtonLink;
-var requiredItem; 
+var requiredItem;
 var userName;
 var userSurname;
 var userTel;
@@ -35,7 +35,7 @@ navButton.addEventListener("click", function (evt) {
 });
 
 
-//проверка работы хранилища  
+//проверка работы хранилища
 try {
   storageuserName = localStorage.getItem("userName");
   storageuserSurname = localStorage.getItem("userSurname");
@@ -56,7 +56,7 @@ if (reviewButton) {
   userTel = reviewForm.querySelector("[id=tel]");
   userEmail = reviewForm.querySelector("[id=email]");
   messageContent = reviewForm.querySelector("[id=content]");
-  
+
   //проверка полей формы отправки отзыва
   reviewForm.addEventListener("submit", function (evt) {
     evt.preventDefault();
@@ -87,7 +87,7 @@ if (reviewButton) {
       }
       if (messageContent.value == "") {
         messageContent.classList.add("review-form__input_error");
-      } 
+      }
     } else {
         if (isStorageSupport) {
           localStorage.setItem("userName", userName.value);
@@ -189,7 +189,7 @@ function checkEmail(email) {
     console.log("Введите корректный e-mail");
     return false;
   }
-  return true; 
+  return true;
 }
 
 function checkName(text) {
