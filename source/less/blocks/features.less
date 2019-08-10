@@ -9,10 +9,10 @@
 .features__item {
   box-sizing: border-box;
   position: relative;
-  padding: 20px 20px 9px 70px;
+  padding: 20px 20px 8px 70px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
 }
 
@@ -28,6 +28,7 @@
 }
 
 .features__name {
+  max-width: 100%;
   font-size: 18px;
   line-height: 26px;
   margin: 0;
@@ -38,7 +39,6 @@
   max-width: 100%;
   color: @darkgrey;
   margin: 0 auto;
-  margin-bottom: 14px;
 }
 
 .features__item_house::before {
@@ -73,6 +73,7 @@
     width: calc(100% / 3);
     padding: 143px 45px 33px 45px;
     text-align: center;
+    align-items: center;
   }
 
   .features__item_gift {
@@ -112,5 +113,9 @@
 @media (min-width: @desktop-width) {
   .features {
     padding-bottom: 50px;
+  }
+
+  .features__name {
+    margin-bottom: 22px;
   }
 }

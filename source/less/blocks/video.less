@@ -1,19 +1,21 @@
 .video {
   position: relative;
-  padding: 40px 0;
+  padding: 32px 0 39px;
 }
 
 .video__title {
   margin: 0 15px;
   font-size: 18px;
   line-height: 26px;
+  margin-bottom: 28px;
 }
 
 .video__intro {
-  margin: 25px auto 35px;
+  margin: 25px auto 36px;
   width: 240px;
   font-size: 14px;
   line-height: 24px;
+  margin-bottom: 34px;
 }
 
 .video__container {
@@ -41,7 +43,7 @@
   top: -45px;
   width: 100%;
   height: 45px;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 0 22px;
   flex-shrink: 1;
 }
@@ -66,7 +68,7 @@
   border-radius: 50%;
   background-color: @white;
   top: 50%;
-  left: 25%;
+  left: 20%;
   transform: translateY(-50%);
 }
 
@@ -78,23 +80,21 @@
   background-color: transparent;
   flex-shrink: 0;
   cursor: pointer;
+  fill: #5c6870;
 
   &:focus,
   &:active {
-    outline: none;  
+    outline: none;
   }
 
-  &:hover path,
-  &:hover polygon,
-  &:focus path,
-  &:focus polygon {
+  &:hover,
+  &:focus {
     fill: @darkgrey;
   }
 
-  &:active path,
-  &:active polygon {
+  &:active {
     fill: @darkgrey;
-    opacity: 0.3;
+    fill-opacity: 0.3;
   }
 }
 
@@ -104,7 +104,7 @@
 
 @media (min-width: @tablet-width) {
   .video {
-    padding: 60px;
+    padding: 65px 60px 40px;
   }
 
   .video__title {
@@ -112,7 +112,7 @@
   }
 
   .video__intro {
-    margin: 25px auto 70px;
+    margin: 32px auto 72px;
     width: 420px;
   }
 
@@ -125,10 +125,10 @@
     box-sizing: border-box;
     flex-wrap: nowrap;
     margin: 0;
-    padding: 13px 13px;
-    background-color: rgba(0,0,0,0.6);
+    padding: 13px 17px 13px 13px;
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
   }
 
   .video__progress {
@@ -136,25 +136,30 @@
     top: 0;
     margin-top: 0;
     background-color: transparent;
+
+    &::before {
+      left: 32%;
+    }
+
+    &::after {
+      width: calc(100% - 69px);
+      left: 33px;
+    }
   }
 
-  .video__button path,
-  .video__button polygon {
+  .video__button {
     fill: @white;
-  }
 
-  .video__button:hover path,
-  .video__button:hover polygon,
-  .video__button:focus path,
-  .video__button:focus polygon {
-    fill: @white;
-    opacity: 0.6;
-  }
-  
-  .video__button:active path,
-  .video__button:active polygon {
-    fill: @white;
-    opacity: 0.3;
+    &:hover,
+    &:focus {
+      fill: @white;
+      fill-opacity: 0.6;
+    }
+
+    &:active {
+      fill: @white;
+      fill-opacity: 0.3;
+    }
   }
 
   .video__button_replay {
@@ -166,10 +171,20 @@
 
 @media (min-width: @desktop-width) {
   .video {
-    padding: 60px 200px;
+    padding: 71px 200px 87px;
+  }
+
+  .video__intro {
+    margin-bottom: 69px;
   }
 
   .video__controls {
-     width: 800px;
+    width: 800px;
+    bottom: 85px;
+    padding-right: 20px;
+  }
+
+  .video__progress::before {
+    left: 24%;
   }
 }
