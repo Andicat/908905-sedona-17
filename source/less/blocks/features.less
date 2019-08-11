@@ -63,6 +63,12 @@
   left: 18px;
 }
 
+@media (max-width: @mobile-width-only) {
+  .features__description br {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .features {
     display: flex;
@@ -116,6 +122,6 @@
   }
 
   .features__name {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 }

@@ -62,6 +62,12 @@
     color: @black;
   }
 
+  &::-moz-placeholder {
+    font-size: 16px;
+    color: @black;
+    opacity: 1;
+  }
+
   &:hover {
     background-color: @grey;
     outline: none;
@@ -196,6 +202,13 @@
   overflow: auto;
   background-color: @lightgrey;
 
+  &::-webkit-input-placeholder {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: @black;
+  }
+
   &:-ms-input-placeholder {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
@@ -203,11 +216,12 @@
     color: @black;
   }
 
-  &::-webkit-input-placeholder {
+  &::-moz-placeholder {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: @black;
+    opacity: 1;
   }
 
   &:hover {
