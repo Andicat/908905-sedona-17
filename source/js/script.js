@@ -1,5 +1,5 @@
-var navMain = document.querySelector('.main-nav');
-var navButton = document.querySelector('.page-header__button');
+var navMain = document.querySelector(".main-nav");
+var navButton = document.querySelector(".page-header__button");
 var reviewButton = document.querySelector(".review-form__button");
 var reviewForm = document.querySelector(".review-form");
 var errorForm = document.querySelector(".modal-form_error");
@@ -25,13 +25,13 @@ var valSurname;
 var valTel;
 var valEmail;
 
-navMain.classList.remove('main-nav_nojs');
-navMain.classList.toggle('main-nav_closed');
-navButton.classList.remove('page-header__button_nojs');
+navMain.classList.remove("main-nav_nojs");
+navMain.classList.toggle("main-nav_closed");
+navButton.classList.remove("page-header__button_nojs");
 
 navButton.addEventListener("click", function (evt) {
-  navMain.classList.toggle('main-nav_closed');
-  navButton.classList.toggle('page-header__button_close');
+  navMain.classList.toggle("main-nav_closed");
+  navButton.classList.toggle("page-header__button_close");
 });
 
 
